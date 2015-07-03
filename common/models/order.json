@@ -1,0 +1,75 @@
+{
+  "name": "Order",
+  "plural": "Orders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+    },
+    "properties": {
+      "totalSheet": {
+        "type": "number"
+        },
+        "orderedSheet": {
+          "type": "number"
+          },
+          "balancedSheet": {
+            "type": "number"
+            },
+            "totalAmount": {
+              "type": "number"
+              },
+              "paidAmount": {
+                "type": "number"
+                },
+                "remainingAmount": {
+                  "type": "number"
+                  },
+                  "userId": {
+                    "type": "number",
+                    "required": true
+                    },
+                    "clientId": {
+                      "type": "number",
+                      "required": true
+                      },
+                      "orderId": {
+                        "type": "number"
+                        },
+                        "created": {
+                          "type": "date"
+                          },
+                          "updated": {
+                            "type": "date"
+                            },
+                            "delivered": {
+                              "type": "date"
+                              },
+                              "address": {
+                                "type": "string"
+                                },
+                                "status": {
+                                  "type": "string"
+                                }
+                                },
+                                "validations": [],
+                                "relations": {
+                                  "user": {
+                                    "type": "belongsTo",
+                                    "model": "User",
+                                    "foreignKey": "userId"
+                                    },
+                                    "client": {
+                                      "type": "belongsTo",
+                                      "model": "Client",
+                                      "foreignKey": "clientId"
+                                      },
+                                      "entries": {
+                                        "type": "hasMany",
+                                        "model": "Entry",
+                                        "foreignKey": "orderId"
+                                      }
+                                      },
+                                      "acls": [],
+                                      "methods": []
+                                    }

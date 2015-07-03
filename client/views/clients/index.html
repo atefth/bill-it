@@ -1,0 +1,50 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Client <small>page</small></h1>
+        </div>
+        <div class='col-lg-4'>
+            <a ui-sref="newClient" class="btn btn-block btn-lg btn-primary">Add</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class='row'>
+            <div class="table-responsive">
+                <table class="table table-hover ">
+                    <thead>
+                        <th>Actions</th>
+                        <th>Name</th>
+                        <th>Company</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Since</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="value in clients">
+                            <td>
+                                <a ui-sref="editClient(value)" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </a>
+                                <br />
+                                <br />
+                                <a ng-click="destroy(value)" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a>
+                            </td>
+                            <td><h4>{{ value.name }}</h4></td>
+                            <td><h4>{{ value.company }}</h4></td>
+                            <td><h4>{{ value.address }}</h4></td>
+                            <td><h4>{{ value.email }}</h4></td>
+                            <td><h4>{{ value.mobile }}</h4></td>
+                            <td><h4>{{ value.since | date : dd/MM/YYYY}}</h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

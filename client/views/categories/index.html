@@ -1,0 +1,42 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Category <small>page</small></h1>
+        </div>
+        <div class='col-lg-4' ng-show="isAuthenticated">
+            <a ui-sref="newCategory" class="btn btn-block btn-lg btn-primary">Add</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class='row'>
+            <div class="table-responsive">
+                <table class="table table-hover ">
+                    <thead>
+                        <th ng-show="isAuthenticated">Actions</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Calculation Type</th>
+                        <th>Rate</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-click="viewCategory(value)" ng-repeat="value in categories">
+                            <td ng-show="isAuthenticated">
+                                <a ui-sref="editCategory(value)" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </a>
+                                <br />
+                                <br />
+                                <a ng-click="destroy(value)" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a>
+                            </td>
+                            <td><h4>{{ value.name }}</h4></td>
+                            <td><h4>{{ value.description }}</h4></td>
+                            <td><h4>{{ value.calculation }}</h4></td>
+                            <td><h4>{{ value.rate }}</h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Categoriy <small>page</small></h1>
+        </div>
+        <div class='col-lg-4'>
+            <a ui-sref="editCategory(category)" class="btn btn-block btn-lg btn-warning">Edit</a>
+        </div>
+    </div>
+</div>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">{{ category.name }}</div>
+                <div class="panel-body">
+                    <p>{{ category.description }}</p>
+                </div>
+
+                <!-- Table -->
+                <table class="table table-hover ">
+                    <thead>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Code</th>
+                        <th>Rate</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-click="viewItem(value)" ng-repeat="value in category.items">
+                            <td><h4>{{ value.name }}</h4></td>
+                            <td><h4>{{ value.description }}</h4></td>
+                            <td><h4>{{ value.code }}</h4></td>
+                            <td><h4>{{ value.rate }}</h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>

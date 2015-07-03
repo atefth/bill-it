@@ -1,0 +1,61 @@
+<div class='form-group border-dashed'>
+    <div class='col-lg-5 right-vertical-divider'>
+        <div class='row'>
+            <div class='col-lg-3'>
+                <div class="input-group">
+                    <input type="text" ng-model="entry.x" class="form-control" id="x" placeholder="X inches" ng-change="updateCost()" ng-disabled="entry.item.calculation !== 1">
+                </div>
+            </div>
+            <div class='col-lg-3'>
+                <div class="input-group">
+                    <input type="text" ng-model="entry.y" class="form-control" id="y" placeholder="Y inches" ng-change="updateCost()" ng-disabled="entry.item.calculation !== 1">
+                </div>
+            </div>
+            <div class='col-lg-3'>
+                <div class="input-group">
+                    <input type="text" ng-model="entry.ups" class="form-control" id="ups" placeholder="Ups" ng-change="updateCost()" ng-disabled="entry.item.calculation !== 2">
+                </div>
+            </div>
+            <div class='col-lg-3'>
+                <div class="form hidden">
+                    <input type="text" ng-model="entry.area" class="form-control" id="area" placeholder="Calculated Area" readonly>
+                </div>
+                <div class="input-group">
+                    <input type="text" ng-model="entry.sheets" class="form-control" id="sheets" placeholder="Sheets" ng-change="updateCost()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='col-lg-7'>
+        <div class='row'>
+            <div class='col-lg-4'>
+                <div class="input-group">
+                    <select ng-options="value as value.name for value in items" ng-model="selectedItem" ng-change="updateRate()" class="form-control" id="item">
+                        <option style="display:none" value="">Select Item</option>
+                    </select>
+                </div>
+            </div>
+            <div class='col-lg-2'>
+                <div class="input-group">
+                    <input type="text" ng-model="rate" ng-class="{'inherited form-control': entry.inherited, 'overwritten form-control': !entry.inherited}" id="rate" placeholder="Rate" ng-change="customRate()"> 
+                </div>
+            </div>
+            <div class='col-lg-2'>
+                <div class="input-group">
+                    <input type="text" ng-model="entry.rps" class="form-control" id="rps" placeholder="Rate/Sheet" readonly>
+                </div>
+            </div>
+            <div class='col-lg-3'>
+                <div class="input-group">
+                    <span class="input-group-addon">৳</span>
+                    <input type="text" ng-model="entry.amount" class="form-control" id="amount" placeholder="Amount" readonly>
+                </div>
+            </div>
+            <div class='col-lg-1'>
+                <div class='form'>
+                    <button class="btn btn-xs btn-danger btn-entry-close" ng-click='deleteEntry({obj: entry})' type="button"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

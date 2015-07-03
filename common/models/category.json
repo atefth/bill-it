@@ -1,0 +1,36 @@
+{
+  "name": "Category",
+  "plural": "Categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "updated": {
+      "type": "date"
+    },
+    "rate": {
+      "type": "number"
+    },
+    "created": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "items": {
+      "type": "hasMany",
+      "model": "Item",
+      "foreignKey": "categoryId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

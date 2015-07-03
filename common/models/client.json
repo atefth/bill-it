@@ -1,0 +1,48 @@
+{
+  "name": "Client",
+  "plural": "Clients",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "fax": {
+      "type": "string"
+    },
+    "since": {
+      "type": "date"
+    },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "orders": {
+      "type": "hasMany",
+      "model": "Order",
+      "foreignKey": "orderId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

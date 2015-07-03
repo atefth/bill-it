@@ -1,0 +1,45 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Items <small>page</small></h1>
+        </div>
+        <div class='col-lg-4' ng-show="isAuthenticated">
+            <a ui-sref="newItem" class="btn btn-block btn-lg btn-primary">Add</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class='row'>
+            <div class="table-responsive">
+                <table class="table table-hover ">
+                    <thead>
+                        <th ng-show="isAuthenticated">Actions</th>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Rate</th>
+                        <th>Category</th>
+                        <th>Calculation</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-click="viewItem(value)" ng-repeat="value in items">
+                            <td ng-show="isAuthenticated">
+                                <a ui-sref="editItem(value)" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </a>
+                                <br />
+                                <br />
+                                <a ng-click="destroy(value)" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a>
+                            </td>
+                            <td><h4>{{ value.name }}</h4></td>
+                            <td><h4>{{ value.code }}</h4></td>
+                            <td><h4 ng-class="{ 'inherited' : value.inherited }">{{ value.rate }}</h4></td>
+                            <td><h4>{{ value.category.name }}</h4></td>
+                            <td><h4 ng-show="value.calculation === 1">X & Y</h4><h4 ng-show="value.calculation === 2">Ups</h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

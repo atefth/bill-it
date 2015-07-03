@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <div class="container">
+        <form class="form-horizontal" role="form" ng-submit="registerOrLogin()">
+            <div class="form-group">
+                <legend>{{ legend }}</legend>
+            </div>
+
+            <div class="form-group" ng-hide="legend == 'Login'">
+                <label class="sr-only" for="email">Email</label>
+                <input type="email" class="form-control" ng-model="email" name="email" placeholder="Email Address">
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only" for="username">Username</label>
+                <input type="text" class="form-control" ng-model="username" name="username" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control" ng-model="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success btn-block">{{ legend }}</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Item <small>information</small></h1>
+        </div>
+        <div class='col-lg-4'>
+            <a ui-sref="editItem(item)" class="btn btn-block btn-lg btn-warning">Edit</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="media">
+                <div class="media-left col-lg-4">
+                    <a>
+                        <img class="media-object img img-responsive" src="http://placehold.it/400X400">
+                    </a>
+                </div>
+                <div class="col-lg-8">
+                    <h4 class="media-heading">{{ item.name }}</h4>
+                    <h6>{{ item.description }}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

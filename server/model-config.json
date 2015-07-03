@@ -1,0 +1,50 @@
+{
+  "_meta": {
+    "sources": [
+    "loopback/common/models",
+    "loopback/server/models",
+    "../common/models",
+    "./models"
+    ]
+    },
+    "User": {
+      "dataSource": "dev-mongo",
+      "public": true
+      },
+      "AccessToken": {
+        "dataSource": "dev-mongo",
+        "public": true
+        },
+        "ACL": {
+          "dataSource": "dev-mongo",
+          "public": false
+          },
+          "RoleMapping": {
+            "dataSource": "dev-mongo",
+            "public": false
+            },
+            "Role": {
+              "dataSource": "dev-mongo",
+              "public": false
+              },
+              "Item": {
+                "dataSource": "dev-mongo",
+                "public": true
+                },
+                "Category": {
+                  "dataSource": "dev-mongo",
+                  "public": true
+                  },
+                  "Client": {
+                    "dataSource": "dev-mongo",
+                    "public": true
+                    },
+                    "Order": {
+                      "dataSource": "dev-mongo",
+                      "public": true
+                      },
+                      "Entry": {
+                        "dataSource": "dev-mongo",
+                        "public": true
+                      }
+                    }

@@ -1,0 +1,72 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Order <small>information</small></h1>
+        </div>
+        <div class='col-lg-4'>
+            <a ui-sref="editOrder(order)" class="btn btn-block btn-lg btn-warning">Edit</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <h4 class="media-heading">{{ order.orderId }}</h4>
+        <hr />
+        <div class='form-group'>
+            <div class='col-lg-5 right-vertical-divider'>
+                <div class='row'>
+                    <div class='col-lg-3'>
+                        <div class="form">
+                            <label class="control-label">X Width</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3'>
+                        <div class="form">
+                            <label class="control-label">Y Width</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3'>
+                        <div class="form">
+                            <label class="control-label">Ups</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3'>
+                        <div class="form hidden">
+                            <label class="control-label">Area</label>
+                        </div>
+                        <div class="form">
+                            <label class="control-label">Sheets</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-lg-7'>
+                <div class='row'>
+                    <div class='col-lg-4'>
+                        <div class="form">
+                            <label class="control-label">Item</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-2'>
+                        <div class="form">
+                            <label class="control-label">Rate</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-2'>
+                        <div class="form">
+                            <label class="control-label">RPS</label>
+                        </div>
+                    </div>
+                    <div class='col-lg-3'>
+                        <div class="form">
+                            <label class="control-label">Amount</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div ng-repeat="entry in order.entries" entry-view entry="entry" items="items" delete-entry="deleteEntry(entry)" update-totals="updateTotals()"></div>
+    </div>
+</div>

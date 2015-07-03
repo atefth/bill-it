@@ -1,0 +1,51 @@
+{
+  "name": "Item",
+  "plural": "Items",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "created": {
+      "type": "date"
+    },
+    "updated": {
+      "type": "date"
+    },
+    "rate": {
+      "type": "number"
+    },
+    "categoryId": {
+      "type": "number",
+      "required": true
+    },
+    "calculation": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "entries": {
+      "type": "hasMany",
+      "model": "Entry",
+      "foreignKey": "itemId"
+    },
+    "category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "categoryId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

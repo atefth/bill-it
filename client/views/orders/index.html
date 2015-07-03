@@ -1,0 +1,49 @@
+<div class="page-header">
+    <div class="row">
+        <div class='col-lg-8'>
+            <h1>Orders <small>page</small></h1>
+        </div>
+        <div class='col-lg-4'>
+            <a ui-sref="newOrder" class="btn btn-block btn-lg btn-primary">Add</a>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class='row'>
+            <div class="table-responsive">
+                <table class="table table-hover ">
+                    <thead>
+                        <th>Actions</th>
+                        <th>Order Id</th>
+                        <th>Total Sheets</th>
+                        <th>Ordered Sheets</th>
+                        <th>Balanced Sheets</th>
+                        <th>Total Amount</th>
+                        <th>Paid Amount</th>
+                        <th>Remaining Amount</th>
+                    </thead>
+                    <tbody>
+                        <tr ng-click="viewOrder(value)" ng-repeat="value in orders">
+                            <td>
+                                <a ui-sref="editOrder(value)" class="btn btn-xs btn-warning"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> </a>
+                                <br />
+                                <br />
+                                <a ng-click="destroy(value)" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a>
+                            </td>
+                            <td><h4>{{ value.orderId }}</h4></td>
+                            <td><h4>{{ value.totalSheet }}</h4></td>
+                            <td><h4>{{ value.orderedSheet }}</h4></td>
+                            <td><h4>{{ value.balancedSheet }}</h4></td>
+                            <td><h4>{{ value.amount | number: 2}}</h4></td>
+                            <td><h4>{{ value.paidAmount | number: 2}}</h4></td>
+                            <td><h4>{{ value.remainingAmount | number: 2}}</h4></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

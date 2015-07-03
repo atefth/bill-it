@@ -1,0 +1,25 @@
+.right-vertical-divider{
+    height: 100%;
+    border-right: 2px dotted #d5d5d5;
+}
+
+.btn-entry-close{
+    margin-top: 5px;
+}
+
+.inherited {
+    font-style: oblique;
+    color: #ababab;
+}
+
+.overwritten {
+    font-weight: bolder;
+    color: #e47575;
+}
+
+.border-dashed {
+    border: 2px dotted #ababab;
+    border-radius: 8px;
+    padding: 5px 0px;
+    min-height: 49px;
+}
