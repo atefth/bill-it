@@ -2,9 +2,13 @@
   "db": {
     "name": "db",
     "connector": "memory"
-  },
-  "dev-mongo": {
-    "name": "dev-mongo",
-    "connector": "mongodb"
-  }
+    },
+    "dev-mongo": {
+        "name": "dev-mongo",
+        "host": "ex-std-node634.prod.rhcloud.com",
+        "connector": "mongodb",
+        "username": "admin",
+        "password": "tMCqPG6Hu1AK"
+    }
 }
+~
