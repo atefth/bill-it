@@ -5,10 +5,10 @@
     },
     "dev-mongo": {
         "name": "dev-mongo",
-        "host": "ex-std-node634.prod.rhcloud.com",
+        "host": "127.3.161.130",
         "connector": "mongodb",
-        "username": "admin",
-        "password": "tMCqPG6Hu1AK"
+        "username": "billit",
+        "password": "password",
+        "database": "billit"
     }
 }
-~

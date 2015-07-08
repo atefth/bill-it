@@ -3,7 +3,7 @@ angular
     ['ui.router', 'ui.bootstrap', 'ui.date', 'lbServices', 'mohona-billing.controllers'])
 .config(['$httpProvider', 'LoopBackResourceProvider', function($httpProvider, LoopBackResourceProvider) {
     LoopBackResourceProvider.setAuthHeader('X-Access-Token');
-    LoopBackResourceProvider.setUrlBase('http://localhost:3000/api');
+    LoopBackResourceProvider.setUrlBase('http://billit.softbotsystems.com/api');
 }])
 .run(['$rootScope', 'User', '$state', function ($rootScope, User, $state) {
     if (User.isAuthenticated()) {
